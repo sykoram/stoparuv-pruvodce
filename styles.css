@@ -1,0 +1,151 @@
+/* reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #040c44;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    color: #d0a8ff;
+    padding: .5rem
+}
+
+#title {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #d0a8ff;
+    border-bottom: 1px solid #d0a8ff;
+}
+nav .item:hover {
+    background-color: #d0a8ff;
+}
+nav .item a {
+    color: #d0a8ff;
+    padding: .5rem 2rem;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25rem;
+}
+nav .item a:hover {
+    color: #040c44;
+}
+
+article {
+    padding: 1rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+}
+h1 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid white;
+    margin-bottom: 1.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    color: #d0a8ff;
+    text-decoration: none;
+}
+a:hover {
+    /* color: #040c44;
+    background-color: #d0a8ff; */
+    text-decoration: underline;
+}
+
+code {
+    background-color: #373472;
+    border-radius: .25rem;
+    height: 1em;
+    font-size: 0.85em;
+    padding: 0 .25rem;
+}
+pre {
+    background-color: #373472;
+    overflow-x: auto;
+    padding: .5rem;
+    line-height: normal;
+}
+pre > code {
+    padding: 0;
+}
+
+li {
+    margin-left: 1.25rem;
+    padding-left: .25rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+td, th {
+    border: 1px solid #423f7a;
+    padding: .5rem 1rem;
+}
+
+blockquote {
+    background-color: #373472;
+    font-style: italic;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+blockquote + figcaption {
+    background-color: #373472;
+    text-align: right;
+    margin-top: -1rem;
+    padding: .5rem;
+}
+
+img {
+    border: 1px solid #373472;
+}
+
+footer {
+    color: #8e92bf;
+    text-align: center;
+    padding: 1rem;
+}

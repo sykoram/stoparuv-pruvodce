@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS | Stopařův průvodce vytvářením webových stránek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michal Sýkora">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div id="title">Stopařův průvodce vytvářením webových stránek</div>
+    </header>
+    <nav>
+      <div class="item"><a href="index.html">Úvod</a></div>
+      <div class="item"><a href="html.html">HTML</a></div>
+      <div class="item"><a href="css.html">CSS</a></div>
+    </nav>
+    <main>
+      <article>
+        <section>
+          <h1>CSS aneb Jéé, barvičky!</h1>
+          <p><i>Nechcete, aby vaše stránka vypadala tak obyčejně, černobíle a defaultně? Nechcete, aby o vás přátelé říkali, že neumíte dělat webové stránky? Představujeme zbrusu nové Kaskádové styly (CSS)!</i></p>
+        </section>
+        <section>
+          <h2>Mám štětec a kyblík barvy &ndash; kde začít?</h2>
+          <p>Jsou tři druhy CSS:</p>
+          <ol>
+            <li><i>Inline CSS</i> se píše rovnou do HTML elementů jako atribut, např: <code>&lt;p style=&quot;color: red; font-weight: bold&quot;&gt;Varování&lt;/p&gt;</code> (text bude červeně a tučně)</li>
+            <li>U <i>interního CSS</i> už jsou všechny styly pohromadě, ale jsou pořád součástí HTML souboru v elementu <code>style</code> (který se dává do <code>head</code>).</li>
+            <li>Nejvíce je ale doporučované <i>externí CSS</i>. Píše se do vlastního souboru s příponou <code>css</code> a je tedy odděleně od HTML, což je mnohem přehlednější. Budeme tedy používat to.</li>
+          </ol>
+          <p>Vytvoříme nový textový soubor, např. <code>styles.css</code>, a v HTML řekneme, že má používat styly z tohoto souboru:</p>
+          <pre><code>&lt;head&gt;
+  <i>...</i>
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;</code></pre>
+        </section>
+        <section>
+          <h2>Jak říci, že chci obarvit Tohle?</h2>
+          <p>Existuje několik způsobů, jak v CSS vybrat HTML element(y).</p>
+          <p>Pokud chceme <b>jeden určitý element</b>, například určitý <code>p</code>, ale ne ostatní <code>p</code>, tak použijeme <i>id</i>. Jedno id má být správně použito maximálně u jednoho elementu, který je tak unikátní. Do HTML ho přidáme jako atribut. V CSS před něj napíšeme <code>#</code>:</p>
+          <pre><code>&lt;p id=&quot;odstavec-1&quot;&gt;Varování&lt;/p&gt;</code></pre>
+          <pre><code>#odstavec-1 {
+  color: red;
+  font-weight: bold;
+}</code></pre>
+          <p>Dále se pak může hodit vybrat <b>více určitých elementů</b>. Na to tu je <i>class</i>. Stejně jako id se píše jako atribut, ale předponu v CSS má <code>.</code> a více elementů může mít tu stejnou třídu.</p>
+          <pre><code>&lt;h1 class=&quot;cervene&quot;&gt;Červený nadpis&lt;/h1&gt;
+&lt;p class=&quot;cervene&quot;&gt;Varování&lt;/p&gt;
+&lt;p&gt;Jablíčka jsou často &lt;span class=&quot;cervene&quot;&gt;červená&lt;/span&gt;.&lt;/p&gt;</code></pre>
+          <pre><code>.cervene {
+  color: red;
+}</code></pre>
+          <p>A nakonec lze také vybrat <b>všechny elementy stejného typu</b>. Žádný atribut v HTML ani předponu v CSS tentokrát přidávat nemusím. Tento styl například nastaví u všech <code>h1</code> kurzívu:</p>
+          <p id="pos"></p>
+          <pre><code>h1 {
+  font-style: italic;
+}</code></pre>
+          <p>Existují ale i <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">složitější a mocnější způsoby, jak vybírat</a>.</p>
+        </section>
+        <section>
+          <h2>OK a co s tím vybraným elementem tedy můžu dělat?</h2>
+          <p>HODNĚ!</p>
+          <p>Například <code>font-family</code> nastavuje konkrétní font, <code>font-size</code> jeho velikost, <code>color</code> barvu, pomocí <code>font-style</code> a <code>font-weight</code> kurzívu a tučný text, <code>width</code> a <code>height</code> nastavují rozměry, <code>margin</code> vnější odsazení, <code>padding</code> vnitřní odsazení, <code>border</code> ohraničení, <code>background-color</code> barvu pozadí atd... Dobrý přehled lze opět najít na stránkách <a href="https://www.w3schools.com/css/default.asp">W3Schools</a>.</p>
+          <p>Doporučuji si s tím zase hrát a vytvářet, co napadne. Přeji také trpělivost, protože CSS není někdy úplně příjemné a intuitivní, hlavně při složitějších pravidlech.</p>
+          <p>Pokud ale aspoň nějakou tu chvilku s CSS strávíme, tak dokážeme naši stránku pěkně zkrášlit. Tady je screenshot nějaké úplně náhodné stránky:</p>
+          <p><img src="img.png" alt="Some random webpage..."></p>
+        </section>
+        <section>
+          <h2>Pár slov na konec</h2>
+          <p>Čtenáři, děkuji, že jsi se vydal se mnou na toto dobrodružství po webové galaxii. Od této chvíle jsi opravdový stopař. A hlavně nezapomeň: <i>NEPROPADEJ PANICE!</i></p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div>Michal Sýkora 2021</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML | Stopařův průvodce vytvářením webových stránek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michal Sýkora">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div id="title">Stopařův průvodce vytvářením webových stránek</div>
+    </header>
+    <nav>
+      <div class="item"><a href="index.html">Úvod</a></div>
+      <div class="item"><a href="html.html">HTML</a></div>
+      <div class="item"><a href="css.html">CSS</a></div>
+    </nav>
+    <main>
+      <article>
+        <section>
+          <h1>HTML aneb Učíme se na klávesnici psát <code>&lt;</code> a <code>&gt;</code></h1>
+          <p>HTML je ve zkratce speciální jazyk, kterému rozumí prohlížeč. Kdybyste mu řekli: &bdquo;Udělej prosím odstavec, ve kterém bude text &sbquo;Ahoj, světe!&lsquo;&ldquo;, tak na vás bude nechápavě koukat. Musíte říct: <code>&lt;p&gt;Ahoj, světe!&lt;/p&gt;</code>, což se možná špatně vyslovuje, ale pro prohlížeč je to mnohem srozumitelnější.</p>
+          <p>A teď k tomu nejdůležitějšímu: zmáčkněte pravý alt a čárku/tečku (na české klávesnici) a menšítka a většítka jsou na světě! Gratuluji, máte úžasný potenciál stát se HTML kodérem (říkat tomu HTML programátor je přísně zakázáno!).</p>
+          <p>HTML soubor vypadá tak, že obsahuje jednotlivé <i>HTML elementy</i> (například ten odstavec, který je o pár řádek výše). To s tím menšítkem a většítkem se nazývá <i>tag</i>. Element má typicky počáteční a koncový tag, mezi kterými je obsah elementu (text a/nebo další elementy), ale existují i výjimky &ndash; některé elementy nemají obsah a ani koncový tag, například <code>&lt;br&gt;</code>, což je konec řádku.</p>
+        </section>
+        <section>
+          <h2>Kostra naší planetky</h2>
+          <p>Než začneme se sázením stromů, napouštěním jezer vodou a možná i stavbou měst (rozumějte vytvářením obsahu webové stránky), musíme si napřed vytvořit vlastní planetku, na které to celé budeme moci zrealizovat.</p>
+          <p>Založme tedy v nějakém adresáři nový textový soubor <code>index.html</code> (tak se obvykle soubor hlavní stránky jmenuje). Při přepisování přípony z <code>txt</code> na <code>html</code> se bude Windows nejspíš bouřit, ale v tomto případě je to úplně v pohodě. Chce tak ale nejspíš upozornit na to, že když u souboru <code>Stoparuv_pruvodce_Galaxii.pdf</code> změníte příponu na <code>mp3</code>, tak se z něho najednou nestane audiokniha.</p>
+          <p>Otevřeme si tedy <code>index.html</code> a vložíme následující kód (nelekněte se, vysvětlení následuje):</p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Moje první stránka&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;&lt;/header&gt;
+    &lt;nav&gt;&lt;/nav&gt;
+    &lt;main&gt;
+      
+    &lt;/main&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <p>Všimněme si, jak jsou elementy v sobě hezky zanořené. <code>&lt;!DOCTYPE html&gt;</code> říká, že soubor je HTML (verze 5, což je nejnovější). Následuje povinná struktura: <code>html</code> element, ve kterém je <code>head</code> a <code>body</code></p>
+          <p>V <code>head</code> jsou dodatečné informace o stránce, například jak se má zobrazovat. Pro nás je nejdůležitější <code>title</code>, který určuje nadpis stránky (zobrazí se v prohlížeči nahoře na záložce).</p>
+          <p>Element <code>body</code> obsahuje, co už bude prohlížeč opravdu zobrazovat. Moderní je rozdělení na <code>header</code> (hlavička stránky), <code>nav</code> (menu), <code>main</code> (hlavní obsah - například článek) a <code>footer</code> (patička).</p>
+        </section>
+        <section>
+          <h2>Základy stavitelství</h2>
+          <p>První stránky většinou vypadají nějak následovně (toto už je obsah elementu <code>body</code>, případně <code>main</code>):</p>
+          <pre><code>&lt;h1&gt;Moje první stránka&lt;/h1&gt;
+&lt;p&gt;Ahoj, toto je moje první stránka.&lt;/p&gt;
+&lt;p&gt;Text může být &lt;b&gt;tučně&lt;/b&gt; nebo &lt;i&gt;kurzívou&lt;/i&gt;. A toto je &lt;a href=&quot;https://google.com&quot;&gt;odkaz na Google&lt;/a&gt;.&lt;/p&gt;</code></pre>
+          <p>Všimněme si, že element odkazu (<code>a</code>) má nějaký <i>atribut</i> &ndash; konkrétně kam odkaz vede. Atribut se píše do počátečního tagu za název tagu a má typicky <i>název</i> a <i>hodnotu</i>, která by měla být v uvozovkách. Můžete si zkusit, jak by takovýto soubor zobrazil prohlížeč.</p>
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Přehled základních stavebních materiálů:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="2">s obsahem a koncovým tagem</th>
+              </tr>
+              <tr>
+                <td><code>&lt;p&gt;</code></td>
+                <td>odstavec</td>
+              </tr>
+              <tr>
+                <td><code>&lt;h1&gt;</code></td>
+                <td rowspan="4">nadpisy<br>(od největšího k nejmenšímu)</td>
+              </tr>
+              <tr>
+                <td><code>&lt;h2&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code><i>...</i></code></td>
+              </tr>
+              <tr>
+                <td><code>&lt;h6&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>&lt;b&gt;</code></td>
+                <td>text tučně</td>
+              </tr>
+              <tr>
+                <td><code>&lt;i&gt;</code></td>
+                <td>text kurzívou</td>
+              </tr>
+              <tr>
+                <td><code>&lt;a&gt;</code></td>
+                <td>odkaz</td>
+              </tr>
+              <tr>
+                <td><code>&lt;ul&gt;</code></td>
+                <td rowspan="2">seznam<br>(číslovaný a nečíslovaný)</td>
+              </tr>
+              <tr>
+                <td><code>&lt;ol&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>&lt;li&gt;</code></td>
+                <td>prvek seznamu</td>
+              </tr>
+              <tr>
+                <td><code>&lt;div&gt;</code></td>
+                <td>obecný <i>block</i> element</td>
+              </tr>
+              <tr>
+                <td><code>&lt;span&gt;</code></td>
+                <td>obecný <i>inline</i> element</td>
+              </tr>
+              <tr>
+                <td><code>&lt;table&gt;</code></td>
+                <td>tabulka</td>
+              </tr>
+              <tr>
+                <td><code>&lt;tr&gt;</code></td>
+                <td>řádek tabulky</td>
+              </tr>
+              <tr>
+                <td><code>&lt;td&gt;</code></td>
+                <td>buňka řádku tabulky</td>
+              </tr>
+              <tr>
+                <th colspan="2">bez obsahu a koncového tagu</th>
+              </tr>
+              <tr>
+                <td><code>&lt;br&gt;</code>
+                </td><td>konec řádku</td>
+              </tr>
+              <tr>
+                <td><code>&lt;img&gt;</code></td>
+                <td>obrázek</td>
+              </tr>
+              <tr>
+                <td><code>&lt;hr&gt;</code></td>
+                <td>vodorovná čára</td>
+              </tr>
+              <tr>
+                <th colspan="2"><a href="https://www.w3schools.com/tags/default.asp">A další...</a></th>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>Co postavit?</h2>
+          <p>To je úplně na vás. Jestli se chcete HTML naučit, prostě si hrajte a zkoušejte. Když si s něčím nebudete vědět rady, určitě nejste jediní, takových před vámi už bylo hodně, takže googlete a určitě naleznete odpověď. Dobrým zdrojem informací jsou také stránky <a href="https://www.w3schools.com/html/default.asp">w3schools.com</a> a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">mozilla.org</a>.</p>
+          <p>Až si trošku pohrajete, tak se můžete plynule přesunout na <a href="css.html">další část</a>.</p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div>Michal Sýkora 2021</div>
+    </footer>
+  </body>
+</html>
